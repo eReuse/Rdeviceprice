@@ -1,0 +1,17 @@
+sourceSchema;targetSchema;version;output;outputName
+Identifier;Identifier;1.0;1;Identifier
+Serial.Number;Serial.Number;1.0;1;Serial.Number
+Type;Type;1.0;1;Type
+Subtype;Subtype;1.0;1;Subtype
+Appearance.Score;Appearance.Score;1.0;1;Appearance.Score
+Functionality.Score;Functionality.Score;1.0;1;Functionality.Score
+Condition.Score;Score;1.0;1;Score
+Condition;Range;1.0;1;Range
+Identifier;Identifier;0.9;1;Identifier
+serial.number;Serial.Number;0.9;1;Serial.Number
+type;Type;0.9;1;Type
+subtype;Subtype;0.9;1;Subtype
+appearance.score;Appearance.Score;0.9;1;Appearance.Score
+functionality.score;Functionality.Score;0.9;1;Functionality.Score
+Score;Score;0.9;1;Score
+Range;Range;0.9;1;Range

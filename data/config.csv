@@ -1,0 +1,13 @@
+Version;Entity;Type;Subtype;Range;Variant;per.refurbisher;per.platform;per.retailer
+1.0;eReuse;computer;desktop;High;standard;0,35125;0,204375;0,444375
+1.0;eReuse;computer;desktop;Medium;standard;0,385;0,2558333333;0,3591666667
+1.0;eReuse;computer;desktop;Low;standard;0,5025;0,30875;0,18875
+1.0;eReuse;computer;desktop;High;2yearsGuarantee;0,47425;0,275875;0,599875
+1.0;eReuse;computer;desktop;Medium;2yearsGuarantee;0,539;0,3581666667;0,5028333333
+1.0;eReuse;computer;laptop;High;standard;0,3469230769;0,195;0,4580769231
+1.0;eReuse;computer;laptop;Medium;standard;0,382;0,1735;0,4445
+1.0;eReuse;computer;laptop;Low;standard;0,4528571429;0,2264285714;0,3207142857
+1.0;eReuse;computer;laptop;High;2yearsGuarantee;0,4522307692;0,2632307692;0,6345384615
+1.0;eReuse;computer;laptop;Medium;2yearsGuarantee;0,5108;0,2429;0,6463
+1.0;eReuse;computer;monitor;High;standard;0,3255555556;0,3244444444;0,35
+1.0;eReuse;computer;monitor;Medium;standard;0,3542857143;0,3528571429;0,2928571429

@@ -1,0 +1,14 @@
+Package: Rdeviceprice
+Type: Package
+Title: Pricing Digital devices
+Version: 0.1.0
+Date: 2017-09-20
+Author: David Franquesa
+Maintainer: David Franquesa <d.franquesa@ereuse.org>
+Depends: R (>= 1.8.0), stringr (>= 1.2.0), data.table (>= 1.10.4), dplyr (>= 0.7.4)
+Description: Definition of the price associated to a digital device (laptops, desktops) and shares of refurbishment, management and distribution of digital devices
+License: file LICENSE
+URL: http://www.ereuse.org, https://github.com/eReuse/Rdeviceprice
+Copyright: eReuse.org
+Encoding: UTF-8
+LazyData: true

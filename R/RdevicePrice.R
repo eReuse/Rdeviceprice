@@ -18,9 +18,9 @@ devicePriceMain <- function(input){
     result <- list("price" = data.table(), "status" = -1, "status.description" = status)
   } 
   else {
-    config  <- configData[configData$Version==versionPrice,] # load parameters afecting model and define key as param2
-    schema  <- data.frame(schemaAux[schemaAux$version == versionSchema]) # load p
-    result  <- tryCatchError(adaptSchema(schema,sourceData)) # Etl Schema ensure required columns exists
+    config   <- configData[configData$Version==versionPrice,] # load parameters afecting model and define key as param2
+    DBschema <- data.frame(schemaAux[schemaAux$version == versionSchema]) # load p
+    result   <- tryCatchError(adaptSchema(DBschema,sourceData)) # Etl Schema ensure required columns exists
     isErrorSchema <- inherits(result$value, "simpleError") 
     if(!isErrorSchema){
       result <- devicePrice(dt=result$value, config) # TODO: Control errors

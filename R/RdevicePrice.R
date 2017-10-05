@@ -83,8 +83,11 @@ devicePrice  <- function(dt, config){
   eurosPerPointInLaptops  <- 30
   
   dt1$Price <- as.numeric(0.0)
-  dt1[Subtype == "desktop",Price := Score* eurosPerPointInDesktops]
-  dt1[Subtype == "laptop",Price := Score* eurosPerPointInLaptops]
+  dt1[Subtype == "Desktop",Price := Score* eurosPerPointInDesktops]
+  dt1[Subtype == "Microtower",Price := Score* eurosPerPointInDesktops]
+  dt1[Subtype == "Server",Price := Score* eurosPerPointInDesktops]
+  dt1[Subtype == "Laptop",Price := Score* eurosPerPointInLaptops]
+  dt1[Subtype == "Netbook",Price := Score* eurosPerPointInLaptops]
   
   # config$per.refurbisher
   # 
@@ -102,18 +105,18 @@ devicePrice  <- function(dt, config){
   # 
   #### Set Amounts
   # Set amount in column amount.standard.refurbisher
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium","Low"), variant = "standard", actor = "refurbisher")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium","Low"), variant = "standard", actor = "refurbisher")
   # Set amount in column amount.standard.platform
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium","Low"), variant = "standard", actor = "platform")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium","Low"), variant = "standard", actor = "platform")
   # Set amount in column amount.standard.retailer
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium","Low"), variant = "standard", actor = "retailer")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium","Low"), variant = "standard", actor = "retailer")
   
   # Set amount in column amount.2yearsGuarantee.refurbisher (range low is not provided)
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "refurbisher")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "refurbisher")
   # Set amount in column amount.standard.platform
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "platform")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "platform")
   # Set amount in column amount.standard.retailer
-  setAmountPerActorPerVariant(config, dt1, subtypes = c("desktop","laptop"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "retailer")
+  setAmountPerActorPerVariant(config, dt1, subtypes = c("Desktop","Server","Laptop","Microtower","Netbook"), ranges = c("High","Medium"), variant = "2yearsGuarantee", actor = "retailer")
   
   # Add Price.2yearsGuarantee
   dt1$Price.2yearsGuarantee <- as.numeric(0.0)

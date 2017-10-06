@@ -11,14 +11,14 @@ tryCatchError <- function(expr) {
        warning = W)
 }
 # Rename columns of sourceData to fit with the program and ensure all required columns exists
-adaptSchema <- function(schema, sourceData){
-  columnNames <- schema # Load Config file
+adaptSchema <- function(schemaAux, sourceDataAux){
+  columnNames <- schemaAux # Load Config file
   isError  <- inherits(columnNames$value, "simpleError")
   if(!isError){
     oldColNames <- columnNames$sourceSchema # Column 1
     newColNames <- columnNames$targetSchema
     columnsMap <- data.frame(oldColNames,newColNames)
-    adaptedSchema <- setSchema(sourceData,columnsMap)
+    adaptedSchema <- setSchema(sourceDataAux,columnsMap)
     adaptedSchema <- adaptedSchema[,newColNames, with=FALSE] ## Filter so- 
   } else{
     adaptedSchema <- list(value = columnNames$value, warning = columnNames$warning) # colnames has the error

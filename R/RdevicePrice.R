@@ -5,7 +5,8 @@
 #' Version: 1
 #' Date: 27/10/2017
 #' Description: Return Price
- 
+#' @param sourceData (Type, Subtype, Condition, Score, Condition,...)
+
 devicePriceMain <- function(input){
   sourceData    <- data.table(input$sourceData)
   schemaAux     <- data.table(input$schema)

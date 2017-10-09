@@ -90,6 +90,9 @@ devicePrice  <- function(dt, config){
   dt1[Subtype == "Laptop",Price := Score* eurosPerPointInLaptops]
   dt1[Subtype == "Netbook",Price := Score* eurosPerPointInLaptops]
   
+  dt1[Range == "VeryLow", Price := NA]
+  
+  
   # config$per.refurbisher
   # 
   # subtypes = c("desktop","laptop")
@@ -123,6 +126,7 @@ devicePrice  <- function(dt, config){
   dt1$Price.2yearsGuarantee <- as.numeric(0.0)
   dt1[,Price.2yearsGuarantee := amount.2yearsGuarantee.refurbisher + amount.2yearsGuarantee.platform + amount.2yearsGuarantee.retailer]
 
+  dt1[Range == "VeryLow", Price.2yearsGuarantee := NA]
   
   #' Return values
   result <- dt1

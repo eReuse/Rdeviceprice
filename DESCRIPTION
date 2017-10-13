@@ -6,7 +6,8 @@ Date: 2017-10-06
 Author: David Franquesa
 Maintainer: David Franquesa <d.franquesa@ereuse.org>
 Depends: R (>= 1.8.0), stringr (>= 1.2.0), data.table (>= 1.10.4), dplyr (>= 0.7.4)
-Description: Definition of the price associated to a digital device (laptops, desktops) and shares of refurbishment, management and distribution of digital devices
+Suggests: testthat
+Description: Set a price for a digital device (laptops, desktops) based on a score based on the aesthetics and performance of the internal components and the after-sales service guarantee.
 License: file LICENSE
 URL: http://www.ereuse.org, https://github.com/eReuse/Rdeviceprice
 Copyright: eReuse.org
